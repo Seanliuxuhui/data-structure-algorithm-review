@@ -37,5 +37,14 @@ var Tester = function(){
         console.log(sortName + " : " + (testEnd - testStart)/ CLOCKS_PER_SECOND + "  ");
     };
 
+    test.testSortV2 = function (sortName, sort, arr, BS) {
+        const CLOCKS_PER_SECOND = 60;
+        var testStart = Date.now();
+        var sorted = sort(arr, BS);
+        var testEnd = Date.now();
+        console.log(test.isSorted(sorted, arr, arr.length));
+        console.log(sortName + " : " + (testEnd - testStart)/ CLOCKS_PER_SECOND + "  ");
+    }
+
     return test;
 }
