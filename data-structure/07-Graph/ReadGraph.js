@@ -40,15 +40,13 @@ function readFile(evt){
 
             var p1 = new Path(g1, 0);
             p1.showPath(3);
+            var s1 = new ShortestPath(g1, 0);
+            console.log(s1.length(3));
+
             // g1.show();
             // g2.show();
         }
     } else {
         alert("Failed to load file!");
     }
-}
-
-
-ReadGraph.prototype.addEdge = function(a, b) {
-    
 }
